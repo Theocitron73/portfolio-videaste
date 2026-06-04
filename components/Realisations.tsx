@@ -37,7 +37,12 @@ function VideoCard({ video }: { video: any }) {
     <div className="group relative aspect-video rounded-xl overflow-hidden border border-white/10 hover:border-[#3E26FF] transition-all shadow-xl bg-gray-900 w-full">
       {!isPlaying ? (
         <div className="absolute inset-0 cursor-pointer" onClick={() => setIsPlaying(true)}>
-          <img src={`https://www.dailymotion.com/thumbnail/video/${video.dmId}`} alt={video.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <img 
+  src={`https://www.dailymotion.com/thumbnail/video/${video.dmId}`} 
+  alt={video.title} 
+  // Remplace object-cover par object-contain
+  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black" 
+/>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           
           {/* Badge Durée en haut à gauche */}

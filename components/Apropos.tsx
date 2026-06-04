@@ -48,8 +48,7 @@ export default function About() {
         
         {parcours.map((item, index) => (
           <div key={index} className="relative group mb-[1vh]">
-            <div className={`absolute left-[-2.15vw] top-[1.5vw] w-[1.5vw] h-[1.5vw] rounded-full z-10 transition-all duration-300 border-[0.3vw] border-[#111] ${activeIndex === index ? 'bg-white scale-110' : 'bg-[#3E26FF]'}`} />
-            
+            <div className={`absolute left-[-2.15vw] top-[1.5vw] w-[1.5vw] h-[1.5vw] rounded-full z-10 transition-all duration-300 border-[0.2vw] border-[#111] ${activeIndex === index ? 'bg-white scale-110' : 'bg-[#3E26FF] group-hover:bg-white group-hover:scale-110'}`} />
             <button 
               onClick={() => setActiveIndex(activeIndex === index ? null : index)}
               className={`w-full text-left relative p-[3vw] md:p-[1.5vw] rounded-lg transition-all duration-500 border border-transparent 
