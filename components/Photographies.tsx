@@ -48,9 +48,12 @@ export default function Photos() {
             <img 
               src={photo.src} 
               alt={`Photo ${offset + i + 1}`} 
-              // aspect-square force le carré, object-cover centre l'image dans le carré sans déformation
               className="w-full h-full object-cover cursor-pointer"
               onClick={() => setIndex(offset + i)}
+              // AJOUTS ICI
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
+              style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
             />
           </div>
         </div>
@@ -85,6 +88,10 @@ export default function Photos() {
                   src={photo.src} 
                   alt={`Photo ${i + 1}`} 
                   className="w-full h-auto object-cover" 
+                  // AJOUTS ICI
+                  draggable="false"
+                  onContextMenu={(e) => e.preventDefault()}
+                  style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                 />
               </div>
             </div>
