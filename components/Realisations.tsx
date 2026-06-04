@@ -116,13 +116,13 @@ export default function PortfolioRealisation() {
           className="w-full"
         >
           {/* MOBILE : CARROUSELS DIVISÉS */}
-            <div className="md:hidden flex flex-col gap-[2vh]">
+            <div className="md:hidden flex flex-col gap-[1vh]">
               {/* Carrousel 1 */}
               <div className="flex gap-[4vw] overflow-x-auto snap-x snap-mandatory px-[3vw] pb-[1vh] scrollbar-hide">
                 {categories[activeTab as keyof typeof categories].videos
                   .slice(0, Math.ceil(categories[activeTab as keyof typeof categories].videos.length / 2))
                   .map((video, index) => (
-                    <div key={video.id} className="snap-center shrink-0 w-[85vw] relative">
+                    <div key={video.id} className="snap-center shrink-0 w-[80vw] relative">
                       <div className="absolute bottom-[2vw] left-[2vw] z-50 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-[2.5vw] font-bold border border-white/20">
                         {index + 1} / {categories[activeTab as keyof typeof categories].videos.length}
                       </div>
@@ -138,7 +138,7 @@ export default function PortfolioRealisation() {
                   .map((video, index) => {
                     const globalIndex = Math.ceil(categories[activeTab as keyof typeof categories].videos.length / 2) + index;
                     return (
-                      <div key={video.id} className="snap-center shrink-0 w-[85vw] relative">
+                      <div key={video.id} className="snap-center shrink-0 w-[80vw] relative">
                         <div className="absolute bottom-[2vw] left-[2vw] z-50 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-[2.5vw] font-bold border border-white/20">
                           {globalIndex + 1} / {categories[activeTab as keyof typeof categories].videos.length}
                         </div>

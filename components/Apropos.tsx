@@ -30,7 +30,7 @@ export default function About() {
 
             {/* Ici : On utilise -mt-[15vh] (vh = viewport height). 
                 Plus le chiffre est grand, plus ça remonte vers le haut. */}
-            <div className="relative z-30 -mt-[10vh] md:-mt-[6vw] bg-[#1a1a1a] p-[4vw] md:p-[1.5vw] rounded-lg text-[2.5vw] md:text-[1vw] leading-relaxed w-[90%] md:w-[70%] text-justify shadow-2xl font-bold">
+            <div className="relative z-30 -mt-[14vh] md:-mt-[6vw] bg-[#1a1a1a] p-[4vw] md:p-[1.5vw] rounded-lg text-[2.5vw] md:text-[1vw] leading-relaxed w-[90%] md:w-[70%] text-justify shadow-2xl font-bold">
               <p>Grâce à mes 4 ans d'expériences dont 3 dans une agence de vidéo, je peux être une vraie plus-value pour votre entreprise.</p>
               <br />
               <p>Passionné d'audiovisuel depuis petit, j'ai réalisé des études dans le but de devenir vidéaste, combinant le cadrage, le montage, le motion design... Je suis devenu très polyvalent au fil des années, et cherche à apprendre constamment.</p>
@@ -42,7 +42,7 @@ export default function About() {
             </a>
           </div>
 
-    <div className="flex flex-col gap-[1vh] h-full justify-center items-start w-full mt-[4vw] md:mt-0">
+    <div className="flex flex-col gap-[1vh] h-full justify-center items-start w-full mt-[2vw] md:mt-0">
       <div className="w-[90%] md:w-[85%] relative ml-[2vw] md:ml-0">
         <div className="absolute left-[-1.5vw] top-[1vw] bottom-[1vw] w-[0.2vw] bg-[#3E26FF]/30 z-0" />
         
@@ -61,7 +61,7 @@ export default function About() {
                   {item.title}
                 </h3>
                 <div className="flex justify-between items-center mt-[0.5vh]">
-                  <p className="text-[3vw] md:text-[0.9vw] text-white/80">
+                  <p className="text-[2.5vw] md:text-[0.9vw] text-white/80">
                     {item.date}
                   </p>
                   

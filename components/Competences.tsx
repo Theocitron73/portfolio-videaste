@@ -4,22 +4,22 @@ export default function Skills() {
   const skillsData = [
     { 
       title: "ADOBE", 
-      icon: <PenTool size={25} />, 
+      icon: <PenTool size={23} />, 
       items: ["Photoshop", "Illustrator", "Lightroom", "Première pro", "After effects"] 
     },
     { 
       title: "LOGICIELS", 
-      icon: <Cpu size={25} />, 
+      icon: <Cpu size={23} />, 
       items: ["Notion", "Final cut", "Cinema 4D", "Davinci Resolve" ,"Les IA génératives"] 
     },
     { 
       title: "QUALITÉS", 
-      icon: <Heart size={25} />, 
+      icon: <Heart size={23} />, 
       items: ["Créatif", "Passionné", "Adaptabilité", "Esprit critique", "Travail équipe", "Gestion temps", "Attention détails"] 
     },
     { 
       title: "DRONE", 
-      icon: <Camera size={25} />, 
+      icon: <Camera size={23} />, 
       description: "En possession de ma licence pratique, je prépare la théorie pour proposer des services de télépilote." 
     }
   ];
@@ -35,7 +35,7 @@ export default function Skills() {
     {skillsData.map((skill, index) => (
       <div key={index} className="bg-[#3E26FF] p-[2vw] md:p-[1.5vw] rounded-xl flex flex-col items-center text-center text-white shadow-lg">
         <div className="mb-[1vw] md:mb-[0.5vw]">{skill.icon}</div>
-        <h2 className="text-[4vw] md:text-[1.2vw] font-bold mb-[1vw] md:mb-[0.8vw] ">{skill.title}</h2>
+        <h2 className="text-[3vw] md:text-[1.2vw] font-bold mb-[1vw] md:mb-[0.8vw] ">{skill.title}</h2>
         
         {skill.items ? (
           <ul className="space-y-[0.5vw] md:space-y-[0.3vw]">

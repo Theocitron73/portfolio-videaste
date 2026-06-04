@@ -35,7 +35,7 @@ export default function Photos() {
   const group2 = photos.slice(midPoint);
 
   const Carousel = ({ items, offset }: { items: typeof photos, offset: number }) => (
-    <div className="md:hidden flex gap-[4vw] overflow-x-auto snap-x snap-mandatory pb-[5vh] scrollbar-hide">
+    <div className="md:hidden flex gap-[2vw] overflow-x-auto snap-x snap-mandatory pb-[1vh] scrollbar-hide">
       {items.map((photo, i) => (
         <div key={i} className="snap-center shrink-0 w-[70vw] p-[2vw] relative">
           {/* Compteur en bas à gauche */}
