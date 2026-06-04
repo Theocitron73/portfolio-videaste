@@ -31,7 +31,7 @@ export default function Skills() {
   </h1>
 
   {/* grid-cols-1 par défaut (mobile) -> md:grid-cols-2 pour le desktop */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[1vw] w-full max-w-[1000px]">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-[1.5vw] md:gap-[1vw] w-full max-w-[1000px]">
     {skillsData.map((skill, index) => (
       <div key={index} className="bg-[#3E26FF] p-[2vw] md:p-[1.5vw] rounded-xl flex flex-col items-center text-center text-white shadow-lg">
         <div className="mb-[1vw] md:mb-[0.5vw]">{skill.icon}</div>

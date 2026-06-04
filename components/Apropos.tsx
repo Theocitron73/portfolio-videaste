@@ -42,7 +42,7 @@ export default function About() {
             </a>
           </div>
 
-    <div className="flex flex-col gap-[1vh] h-full justify-center items-start w-full mt-[2vw] md:mt-0">
+    <div className="flex flex-col gap-[1vh] h-full justify-center items-start w-full mt-[0.5vw] md:mt-0">
       <div className="w-[90%] md:w-[85%] relative ml-[2vw] md:ml-0">
         <div className="absolute left-[-1.5vw] top-[1vw] bottom-[1vw] w-[0.2vw] bg-[#3E26FF]/30 z-0" />
         
