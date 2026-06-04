@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,13 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="fr" // Passé en français ;)
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning // Empêche les extensions comme LanguageTool de bloquer React
+      suppressHydrationWarning
     >
-      {/* Remplacement de min-h-full par h-full pour stabiliser le scroll snap */}
       <body className="h-full bg-[#18181b] text-white overflow-hidden">
         {children}
+        <Analytics />
       </body>
     </html>
   );
