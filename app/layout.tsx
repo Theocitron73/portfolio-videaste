@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Théo Lebarbier | Portfolio Vidéaste",
+  title: "Portfolio - Théo Lebarbier ",
   description: "Cadreur, Monteur et Motion Designer",
 };
 
