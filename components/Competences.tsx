@@ -26,7 +26,7 @@ export default function Skills() {
 
   return (
     <div id="competences" className="w-full min-h-screen flex flex-col items-center justify-center pt-[5vh] p-[4vw] md:pt-[4vw]">
-  <h1 className="text-[7vw] md:text-[2.5vw] font-black uppercase text-center mb-[4vw]">
+  <h1 className="text-[5vw] md:text-[2.5vw] font-black uppercase text-center mb-[4vw]">
     Mes compétences et qualités
   </h1>
 
@@ -40,14 +40,14 @@ export default function Skills() {
         {skill.items ? (
           <ul className="space-y-[0.5vw] md:space-y-[0.3vw]">
             {skill.items.map((item, i) => (
-              <li key={i} className="text-[3.5vw] md:text-[0.85vw] font-bold opacity-90 leading-tight ">
+              <li key={i} className="text-[2.5vw] md:text-[0.85vw] font-bold opacity-90 leading-tight ">
                 {item}
               </li>
             ))}
           </ul>
         ) : (
           <div className="flex-grow flex flex-col justify-center">
-            <p className="text-[3.5vw] md:text-[0.85vw] font-bold leading-tight">
+            <p className="text-[2.5vw] md:text-[0.85vw] font-bold leading-tight">
               {skill.description}
             </p>
           </div>

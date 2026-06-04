@@ -85,7 +85,7 @@ export default function PortfolioRealisation() {
   return (
     <div id="portfolio" className="w-full min-h-screen pt-[12vh] md:pt-[4vh] pb-[4vh] flex flex-col items-center overflow-x-hidden">
       <div className="text-center mb-[5vh] px-[5vw] w-full">
-        <h2 className="text-[6vw] md:text-[4vw] lg:text-[3vw] font-black text-white mb-[2vh] uppercase leading-none tracking-tight">Ce que je peux vous apporter ?</h2>
+        <h2 className="text-[5vw] md:text-[4vw] lg:text-[3vw] font-black text-white mb-[2vh] uppercase leading-none tracking-tight">Ce que je peux vous apporter ?</h2>
         <p className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw] text-white font-medium mb-[2vh] w-full leading-tight">Grâce à ma polyvalence, je peux être votre <span className="inline-block">couteau suisse</span> de la <span className="inline-block">vidéo</span></p>
         
         {/* Texte des expertises ajouté */}
@@ -97,9 +97,9 @@ export default function PortfolioRealisation() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-[1vw] mb-[5vh] px-[2vw]">
+      <div className="flex flex-wrap justify-center gap-[1vw] mb-[3vh] px-[2vw]">
         {Object.keys(categories).map((key) => (
-          <button key={key} onClick={() => setActiveTab(key)} className={`px-[1.3vw] py-[0.6vw] rounded-full font-bold transition-all duration-300 text-[3.5vw] md:text-[1vw] ${activeTab === key ? "bg-[#3E26FF] text-white" : "bg-white/5 text-white hover:bg-white/10"}`}>
+          <button key={key} onClick={() => setActiveTab(key)} className={`px-[1.3vw] py-[0.6vw] rounded-full font-bold transition-all duration-300 text-[4vw] md:text-[1vw] ${activeTab === key ? "bg-[#3E26FF] text-white" : "bg-white/5 text-white hover:bg-white/10"}`}>
             {categories[key as keyof typeof categories].name}
           </button>
         ))}
@@ -116,7 +116,7 @@ export default function PortfolioRealisation() {
           className="w-full"
         >
           {/* MOBILE : CARROUSELS DIVISÉS */}
-            <div className="md:hidden flex flex-col gap-[4vh]">
+            <div className="md:hidden flex flex-col gap-[2vh]">
               {/* Carrousel 1 */}
               <div className="flex gap-[4vw] overflow-x-auto snap-x snap-mandatory px-[3vw] pb-[1vh] scrollbar-hide">
                 {categories[activeTab as keyof typeof categories].videos

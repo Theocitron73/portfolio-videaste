@@ -37,7 +37,7 @@ export default function Photos() {
   const Carousel = ({ items, offset }: { items: typeof photos, offset: number }) => (
     <div className="md:hidden flex gap-[4vw] overflow-x-auto snap-x snap-mandatory pb-[5vh] scrollbar-hide">
       {items.map((photo, i) => (
-        <div key={i} className="snap-center shrink-0 w-[80vw] p-[2vw] relative">
+        <div key={i} className="snap-center shrink-0 w-[70vw] p-[2vw] relative">
           {/* Compteur en bas à gauche */}
           <div className="absolute bottom-[4vw] left-[4vw] z-50 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-[2.5vw] font-bold border border-white/20">
             {offset + i + 1} / {photos.length}
@@ -61,7 +61,7 @@ export default function Photos() {
   return (
     // Change px-[15vw] par px-[5vw] ou px-[2vw] pour utiliser plus de largeur
     <div id="photos" className="w-full min-h-screen pt-[9vh] md:pt-[3vh] px-[2vw] md:px-[5vw]">
-      <h2 className="text-[6vw] md:text-[2.5vw] font-black text-[#3E26FF] mb-[3vh] text-center uppercase">
+      <h2 className="text-[4vw] md:text-[2.5vw] font-black text-[#3E26FF] mb-[3vh] text-center uppercase">
         Je propose également de la photographie
       </h2>
 

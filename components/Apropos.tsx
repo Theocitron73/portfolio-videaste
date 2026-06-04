@@ -12,14 +12,14 @@ export default function About() {
   ];
 
   return (
-    <div id="Apropos" className="h-auto md:h-screen w-full pt-[5vh] p-[2vw] md:pt-[2vw] text-white overflow-y-auto md:overflow-hidden">
+    <div id="Apropos" className="h-auto md:h-screen w-full pt-[6vh] p-[2vw] md:pt-[2vw] text-white overflow-y-auto md:overflow-hidden">
       {/* Retour à grid-cols-1 pour mobile et cols-2 pour desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[2vw] h-full items-start">
         
         {/* MOITIÉ GAUCHE */}
           <div className="relative flex flex-col h-full items-center justify-start pt-[2vh]">
             {/* On réduit le -mb-[2vw] qui espace le titre de l'image si besoin */}
-            <h1 className="relative z-10 text-[8vw] md:text-[3.5vw] font-black uppercase text-center w-full drop-shadow-lg -mb-[2vw]">
+            <h1 className="relative z-10 text-[5vw] md:text-[3.5vw] font-black uppercase text-center w-full drop-shadow-lg -mb-[2vw]">
               A Propos de moi
             </h1>
             
@@ -36,13 +36,13 @@ export default function About() {
               <p>Passionné d'audiovisuel depuis petit, j'ai réalisé des études dans le but de devenir vidéaste, combinant le cadrage, le montage, le motion design... Je suis devenu très polyvalent au fil des années, et cherche à apprendre constamment.</p>
             </div>
 
-            <a href="/images/Theo_Lebarbier_CV_2026.pdf" download="Theo_Lebarbier_CV_2026.pdf" className="mt-[1vh] bg-white text-[#3E26FF] py-[1vh] px-[4vw] md:py-[0.8vh] md:px-[2vw] rounded-lg font-bold text-[3.5vw] md:text-[1vw] cursor-pointer inline-flex items-center gap-[1vw] md:gap-[0.5vw] transition-all duration-300 ease-out hover:scale-105 hover:bg-[#3E26FF] hover:text-white group">
+            <a href="/images/Theo_Lebarbier_CV_2026.pdf" download="Theo_Lebarbier_CV_2026.pdf" className="mt-[1vh] bg-white text-[#3E26FF] py-[1vh] px-[4vw] md:py-[0.8vh] md:px-[2vw] rounded-lg font-bold text-[3vw] md:text-[1vw] cursor-pointer inline-flex items-center gap-[1vw] md:gap-[0.5vw] transition-all duration-300 ease-out hover:scale-105 hover:bg-[#3E26FF] hover:text-white group">
               Télécharger mon CV
               <Download size={16} className="opacity-0 -ml-[1vw] transition-all duration-300 group-hover:opacity-100 group-hover:ml-0" />
             </a>
           </div>
 
-    <div className="flex flex-col gap-[1vh] h-full justify-center items-start w-full mt-[5vw] md:mt-0">
+    <div className="flex flex-col gap-[1vh] h-full justify-center items-start w-full mt-[4vw] md:mt-0">
       <div className="w-[90%] md:w-[85%] relative ml-[2vw] md:ml-0">
         <div className="absolute left-[-1.5vw] top-[1vw] bottom-[1vw] w-[0.2vw] bg-[#3E26FF]/30 z-0" />
         
@@ -57,7 +57,7 @@ export default function About() {
             >
               {/* Titre et Date : on enlève group-hover:text-black ici */}
               <div className={`transition-opacity duration-300 ${activeIndex === index ? 'opacity-0' : 'opacity-100'}`}>
-                <h3 className="text-[4vw] md:text-[1.2vw] font-bold text-white">
+                <h3 className="text-[3vw] md:text-[1.2vw] font-bold text-white">
                   {item.title}
                 </h3>
                 <div className="flex justify-between items-center mt-[0.5vh]">
@@ -69,7 +69,7 @@ export default function About() {
                 - Sur mobile : "Appuyer pour lire +"
                 - Sur desktop : "Survoler pour lire +" 
             */}
-            <span className="text-[3vw] md:text-[0.7vw] font-medium text-white/50 transition-opacity duration-300 group-hover:opacity-0">
+            <span className="text-[2.5vw] md:text-[0.7vw] font-medium text-white/50 transition-opacity duration-300 group-hover:opacity-0">
               <span className="md:hidden">Appuyer pour lire +</span>
               <span className="hidden md:inline">Survoler pour lire +</span>
             </span>
