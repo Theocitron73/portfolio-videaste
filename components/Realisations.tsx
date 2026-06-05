@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // 1. Définition des données par catégories
@@ -33,16 +33,34 @@ function VideoCard({ video }: { video: any }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
+  // Timer pour fermer la vidéo juste avant la fin
+  useEffect(() => {
+  if (isPlaying) {
+    const [min, sec] = video.duration.split(':').map(Number);
+    const durationInMs = (min * 60 + sec) * 1000;
+    
+    // Le "OFFSET" permet de compenser le décalage précisément
+    // Si ça coupe encore trop tôt, augmente cette valeur (ex: 800)
+    // Si ça coupe trop tard, diminue-la (ex: 200)
+    const OFFSET = -1200; 
+    
+    const timer = setTimeout(() => {
+      setIsPlaying(false);
+    }, durationInMs - OFFSET);
+    
+    return () => clearTimeout(timer);
+  }
+}, [isPlaying, video.duration]);
   return (
     <div className="group relative aspect-video rounded-xl overflow-hidden border border-white/10 hover:border-[#3E26FF] transition-all shadow-xl bg-gray-900 w-full">
       {!isPlaying ? (
         <div className="absolute inset-0 cursor-pointer" onClick={() => setIsPlaying(true)}>
           <img 
-  src={`https://www.dailymotion.com/thumbnail/video/${video.dmId}`} 
-  alt={video.title} 
-  // Remplace object-cover par object-contain
-  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black" 
-/>
+            src={`https://www.dailymotion.com/thumbnail/video/${video.dmId}`} 
+            alt={video.title} 
+            // Remplace object-cover par object-contain
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black" 
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           
           {/* Badge Durée en haut à gauche */}

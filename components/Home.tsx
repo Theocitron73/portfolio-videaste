@@ -50,7 +50,14 @@ export default function HeroHeader() {
         <div className="hidden lg:block"></div>
 
         {/* Droite : Parcours - Taille de texte réduite sur mobile */}
-        <div className="flex flex-col space-y-4 md:space-y-8 px-4 md:px-0 -translate-y-15 md:translate-y-0 transition-transform">
+        <div className="flex flex-col space-y-4 md:space-y-8 px-4 md:px-0 -translate-y-6 md:translate-y-0 transition-transform">
+<div className="flex items-start space-x-3 md:space-x-4 text-white">
+    <span className="text-[#3E26FF] text-2xl md:text-3xl mt-[-2px]">●</span>
+    <p className="text-sm md:text-xl font-bold uppercase">
+      EXPÉRIENCE EN TANT QUE FREELANCE
+    </p>
+  </div>
+
   <div className="flex items-start space-x-3 md:space-x-4 text-white">
     <span className="text-[#3E26FF] text-2xl md:text-3xl mt-[-2px]">●</span>
     <p className="text-sm md:text-xl font-bold uppercase">
