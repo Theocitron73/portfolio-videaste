@@ -7,7 +7,7 @@ export default function HeroHeader() {
       
       {/* L'IMAGE EN FOND : Fixée en bas */}
       <div className="absolute inset-0 z-5 pointer-events-none flex justify-center items-end">
-        <div className="relative w-full max-w-[100vw] h-[70vh] md:h-[85vh]">
+        <div className="relative w-full max-w-[100vw] h-[70vh] md:h-[85vh] -translate-y-8 md:translate-y-0">
           <Image 
             src="/images/IMG_3470.png" 
             alt="Théo Lebarbier"
