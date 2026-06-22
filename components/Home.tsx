@@ -68,7 +68,7 @@ export default function HeroHeader() {
   <div className="flex items-start space-x-3 md:space-x-4 text-white">
     <span className="text-[#3E26FF] text-2xl md:text-3xl mt-[-2px]">●</span>
     <p className="text-sm md:text-xl font-bold uppercase">
-      1 DUT ET 1 LICENCE PROFESSIONNEL ACQUIS
+      1 DUT ET 1 LICENCE PROFESSIONNELLE ACQUIS
     </p>
   </div>
 </div>
