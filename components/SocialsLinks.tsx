@@ -40,7 +40,7 @@ export default function SocialLinks() {
         rel="noopener noreferrer" 
         className="text-white/50 hover:text-[#3E26FF] transition-all duration-300 hover:scale-110"
       >
-        <SiMalt className="text-2xl md:text-[28px]" />
+        <SiMalt className="text-2xl md:text-[40px]" />
       </a>
     </div>
   );
