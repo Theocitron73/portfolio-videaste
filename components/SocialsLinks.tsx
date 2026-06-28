@@ -1,6 +1,7 @@
 "use client";
 
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { SiMalt } from 'react-icons/si';
 
 export default function SocialLinks() {
   return (
@@ -31,6 +32,15 @@ export default function SocialLinks() {
         className="text-white/50 hover:text-[#3E26FF] transition-all duration-300 hover:scale-110"
       >
         <FaYoutube className="text-2xl md:text-[28px]" />
+      </a>
+
+      <a 
+        href="https://www.malt.fr/profile/theolebarbier?overview" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-white/50 hover:text-[#3E26FF] transition-all duration-300 hover:scale-110"
+      >
+        <SiMalt className="text-2xl md:text-[28px]" />
       </a>
     </div>
   );
