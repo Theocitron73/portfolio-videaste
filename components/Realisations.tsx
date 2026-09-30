@@ -77,7 +77,12 @@ function VideoCard({ video }: { video: any }) {
           </div>
         </div>
       ) : (
-        <iframe className="w-full h-full" src={`https://www.dailymotion.com/embed/video/${video.dmId}?autoplay=1`} allowFullScreen />
+       <iframe 
+        className="w-full h-full border-0" 
+        src={`https://www.dailymotion.com/embed/video/${video.dmId}?autoplay=1&mute=0`} 
+        allow="autoplay; fullscreen; picture-in-picture; web-share"
+        allowFullScreen 
+/>
       )}
 
       {isInfoOpen && (
