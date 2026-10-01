@@ -11,7 +11,7 @@ const categories = {
         id: "v1", 
         title: "Publicité lingettes - Ultragrime", 
         description: "Ce projet de publicité a été effectué en équipe. Tournage, montage et shooting photo avec des plans macro et ralentis.", 
-        src: "/videos/ultragrime.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/Ultragrime.mp4", 
         poster: "/thumbnails/ultragrime.jpg",
         duration: "0:58" 
       },
@@ -19,7 +19,7 @@ const categories = {
         id: "v2", 
         title: "Motion design promotion logiciel - RaiseSens", 
         description: "Animation, sound design et sous-titrage sur des formes épurées.", 
-        src: "/videos/raisesens.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/raisesens.mp4", 
         poster: "/thumbnails/raisesens.jpg", 
         duration: "1:06" 
       },
@@ -27,7 +27,7 @@ const categories = {
         id: "v3", 
         title: "Short réseaux sociaux - CEA", 
         description: "Série de shorts doctorants du CEA : fond vert, plans d'illustration et dynamisme.", 
-        src: "/videos/cea-short.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/cea-short.mp4", 
         poster: "/thumbnails/cea-short.jpg", 
         duration: "1:50" 
       },
@@ -35,7 +35,7 @@ const categories = {
         id: "v4", 
         title: "Aftermovie Inauguration ROSI SOLAR", 
         description: "Aftermovie complet de A à Z avec création de l'intro.", 
-        src: "/videos/rosi-solar.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/rosi-solar.mp4", 
         poster: "/thumbnails/rosi-solar.jpg", 
         duration: "2:21" 
       },
@@ -43,7 +43,7 @@ const categories = {
         id: "v5", 
         title: "Institutionnel - Événement Linkday 2023", 
         description: "Interviews, plans de coupe et générique façon Netflix.", 
-        src: "/videos/linkday.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/linkday.mp4", 
         poster: "/thumbnails/linkday.jpg", 
         duration: "4:45" 
       },
@@ -51,7 +51,7 @@ const categories = {
         id: "v6", 
         title: "Documentaire Hommage ancien PDG - CEA", 
         description: "Documentaire avec effets visuels 2D et 3D.", 
-        src: "/videos/cea-doc.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/cea-doc.mp4", 
         poster: "/thumbnails/cea-doc.jpg", 
         duration: "8:19" 
       },
@@ -72,7 +72,7 @@ const categories = {
         id: "v8", 
         title: "Short - Conseils Financiers", 
         description: "Codes des réseaux sociaux : zooms, sous-titres et rétention.", 
-        src: "/videos/finance.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/finance.mp4", 
         poster: "/thumbnails/finance.jpg", 
         duration: "0:30" 
       },
@@ -80,7 +80,7 @@ const categories = {
         id: "v9", 
         title: "Short Promotionnel - Éditeur de livres", 
         description: "Style Lifestyle et émotion avec musique classique.", 
-        src: "/videos/livre.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/livre.mp4", 
         poster: "/thumbnails/livre.jpg", 
         duration: "0:30" 
       },
@@ -88,7 +88,7 @@ const categories = {
         id: "v10", 
         title: "Youtubeur Amixem - Divertissement", 
         description: "Test YouTube : sound design, effets et rythme.", 
-        src: "/videos/amixem.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/amixem.mp4", 
         poster: "/thumbnails/amixem.jpg", 
         duration: "2:33" 
       },
@@ -96,7 +96,7 @@ const categories = {
         id: "v11", 
         title: "Short Promotionnel - Prêt-à-porter", 
         description: "Montage de mode avec animations de texte soignées.", 
-        src: "/videos/mode.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/mode.mp4", 
         poster: "/thumbnails/mode.jpg", 
         duration: "0:36" 
       },
@@ -104,7 +104,7 @@ const categories = {
         id: "v12", 
         title: "Publicité Ad - Salle de jeux Arcade", 
         description: "Transitions dynamiques et sound design gaming.", 
-        src: "/videos/arcade.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/arcade.mp4", 
         poster: "/thumbnails/arcade.jpg", 
         duration: "0:15" 
       },
