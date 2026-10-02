@@ -64,7 +64,7 @@ const categories = {
         id: "v7", 
         title: "Short Recette - Tiramisu", 
         description: "Vidéo dynamique explorant de nouveaux formats courts.", 
-        src: "/videos/tiramisu.mp4", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/tiramisu.mp4", // 👈 Mis à jour sur Cloudflare R2
         poster: "/thumbnails/tiramisu.jpg", 
         duration: "0:34" 
       },
@@ -112,7 +112,6 @@ const categories = {
   },
 };
 
-// Convertit une durée texte "0:34" en secondes (34)
 function parseDurationToSeconds(durationStr: string): number {
   if (!durationStr) return 0;
   const parts = durationStr.split(':').map(Number);
@@ -136,6 +135,7 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
+  const [isBuffering, setIsBuffering] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(totalDurationInSeconds);
   const [isMuted, setIsMuted] = useState(false);
@@ -143,10 +143,8 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
 
   const controlsTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  // 🚀 BOUCLE 60 FPS CORRIGÉE (Ne s'arrête plus au montage)
   useEffect(() => {
     let animId: number;
-
     const loop = () => {
       if (videoRef.current) {
         setCurrentTime(videoRef.current.currentTime);
@@ -155,11 +153,9 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
         animId = requestAnimationFrame(loop);
       }
     };
-
     if (isPlaying) {
       animId = requestAnimationFrame(loop);
     }
-
     return () => cancelAnimationFrame(animId);
   }, [isPlaying]);
 
@@ -176,9 +172,19 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
     }
   };
 
-  const handleStart = () => {
+  // ✅ Démarrage forcé direct (Empêche le blocage Autoplay du navigateur)
+  const handleStart = async () => {
     setIsStarted(true);
     setIsPlaying(true);
+    setIsBuffering(true);
+
+    if (videoRef.current) {
+      try {
+        await videoRef.current.play();
+      } catch (error) {
+        console.warn("Démarrage différé :", error);
+      }
+    }
   };
 
   const togglePlay = (e?: React.MouseEvent) => {
@@ -232,14 +238,53 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
   return (
     <div 
       ref={containerRef}
-      onContextMenu={(e) => e.preventDefault()} // 👈 Bloque le clic droit partout sur la carte
+      onContextMenu={(e) => e.preventDefault()}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => isPlaying && setShowControls(false)}
       className="group relative aspect-video rounded-xl overflow-hidden border border-white/10 hover:border-[#3E26FF]/60 transition-all shadow-xl bg-black w-full select-none"
     >
-      {/* 1. ÉCRAN DE MINIATURE */}
-      {!isStarted ? (
-        <div onClick={handleStart} className="absolute inset-0 cursor-pointer bg-black flex items-center justify-center">
+      {/* 📹 LA VIDÉO EST TOUJOURS PRÉSENTE (Pour pré-charger les métadonnées) */}
+      <video
+        ref={videoRef}
+        src={video.src}
+        preload="metadata"
+        playsInline
+        controlsList="nodownload"
+        disablePictureInPicture
+        onContextMenu={(e) => e.preventDefault()}
+        onClick={() => togglePlay()}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onWaiting={() => setIsBuffering(true)}
+        onPlaying={() => setIsBuffering(false)}
+        onCanPlay={() => setIsBuffering(false)}
+        onLoadedData={() => setIsBuffering(false)}
+        onTimeUpdate={() => {
+          if (videoRef.current) {
+            setCurrentTime(videoRef.current.currentTime);
+            updateDuration();
+          }
+        }}
+        onLoadedMetadata={updateDuration}
+        onDurationChange={updateDuration}
+        onEnded={() => {
+          setIsPlaying(false);
+          setIsStarted(false);
+          setCurrentTime(0);
+        }}
+        className="w-full h-full object-contain cursor-pointer bg-black"
+      />
+
+      {/* ⏳ SPINNER DE CHARGEMENT PENDANT LE BUFFER */}
+      {isBuffering && isStarted && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
+          <div className="w-9 h-9 rounded-full border-2 border-white/20 border-t-[#3E26FF] animate-spin" />
+        </div>
+      )}
+
+      {/* 1. ÉCRAN DE MINIATURE (Superposé tant que la vidéo n'est pas lancée) */}
+      {!isStarted && (
+        <div onClick={handleStart} className="absolute inset-0 cursor-pointer bg-black flex items-center justify-center z-20">
           {video.poster ? (
             <img 
               src={video.poster} 
@@ -261,7 +306,7 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
 
           {/* Bouton Play */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-11 h-11 md:w-12 md:h-12 bg-black/50 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#3E26FF] group-hover:border-transparent group-hover:scale-105 transition-all duration-300 shadow-md">
+            <div className="w-11 h-11 md:w-12 md:h-12 bg-[#3E26FF] backdrop-blur-md rounded-full border border-white/30 flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(62,38,255,0.7)] transition-all duration-300 shadow-md">
               <svg className="w-4 h-4 text-white translate-x-0.5 fill-current" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
@@ -273,33 +318,6 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
             <h3 className="text-white font-medium text-xs md:text-sm drop-shadow line-clamp-1">{video.title}</h3>
           </div>
         </div>
-      ) : (
-        /* 2. LECTEUR VIDÉO */
-        <video
-          ref={videoRef}
-          src={video.src}
-          autoPlay
-          playsInline
-          controlsList="nodownload"
-          disablePictureInPicture
-          onContextMenu={(e) => e.preventDefault()} // 👈 Bloque le clic droit
-          onClick={() => togglePlay()}
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
-          onTimeUpdate={() => {
-            if (videoRef.current) {
-              setCurrentTime(videoRef.current.currentTime);
-              updateDuration();
-            }
-          }}
-          onLoadedMetadata={updateDuration}
-          onDurationChange={updateDuration}
-          onEnded={() => {
-            setIsPlaying(false);
-            setCurrentTime(0);
-          }}
-          className="w-full h-full object-contain cursor-pointer bg-black select-none"
-        />
       )}
 
       {/* Bouton Détails */}
@@ -338,7 +356,6 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
             showControls ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
         >
-          {/* Barre de progression fluide */}
           <input
             type="range"
             min="0"
