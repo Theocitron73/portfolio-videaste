@@ -10,7 +10,7 @@ const categories = {
       { 
         id: "v1", 
         title: "Publicité lingettes - Ultragrime", 
-        description: "Ce projet de publicité a été effectué en équipe. Tournage, montage et shooting photo avec des plans macro et ralentis.", 
+        description: "Ce projet de publicité a été effectué en équipe. J'ai participé au tournage, au montage et au shooting photo, c'était challengeant parce que c'est la première fois que je participais à une pub produit de cet envergure avec des plans macro et des ralentis sur des détails.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/Ultragrime.mp4", 
         poster: "/thumbnails/ultragrime.jpg",
         duration: "0:58" 
@@ -18,7 +18,7 @@ const categories = {
       { 
         id: "v2", 
         title: "Motion design promotion logiciel - RaiseSens", 
-        description: "Animation, sound design et sous-titrage sur des formes épurées.", 
+        description: "Sur ce projet de motion design, j'ai voulu partir sur des formes simples pour une meilleure compréhension. J'ai réalisé l'animation, le sound design et le sous-titrage.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/raisesens.mp4", 
         poster: "/thumbnails/raisesens.jpg", 
         duration: "1:06" 
@@ -26,7 +26,7 @@ const categories = {
       { 
         id: "v3", 
         title: "Short réseaux sociaux - CEA", 
-        description: "Série de shorts doctorants du CEA : fond vert, plans d'illustration et dynamisme.", 
+        description: "Cette vidéo est en réalité une série de shorts qui met en avant plusieurs étudiants en doctorat du CEA. C'est un projet réalisé en autonomie : j'ai assuré le tournage sur fond vert ainsi que la prise d'images d'illustration, puis j'ai monté les vidéos en ajoutant de nombreux éléments pour les rendre vivantes et dynamiques.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/cea-short.mp4", 
         poster: "/thumbnails/cea-short.jpg", 
         duration: "1:50" 
@@ -34,7 +34,7 @@ const categories = {
       { 
         id: "v4", 
         title: "Aftermovie Inauguration ROSI SOLAR", 
-        description: "Aftermovie complet de A à Z avec création de l'intro.", 
+        description: "Cet aftermovie a été réalisé par mes soins de A à Z avec très peu de retours clients nécessaires. Du tournage jusqu'à la livraison, j'ai eu carte blanche pour mettre en avant cet événement. Je me suis amusé à créer une petite intro pour contextualiser le projet.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/rosi-solar.mp4", 
         poster: "/thumbnails/rosi-solar.jpg", 
         duration: "2:21" 
@@ -42,7 +42,7 @@ const categories = {
       { 
         id: "v5", 
         title: "Institutionnel - Événement Linkday 2023", 
-        description: "Interviews, plans de coupe et générique façon Netflix.", 
+        description: "Le Linkday est un événement annuel visant à aider les personnes en situation de handicap à trouver du travail. Sur ce projet, j'ai participé à toute la chaîne de production : tournage des interviews, images d'illustration et montage. J'ai innové en ajoutant un petit générique style Netflix.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/linkday.mp4", 
         poster: "/thumbnails/linkday.jpg", 
         duration: "4:45" 
@@ -50,7 +50,7 @@ const categories = {
       { 
         id: "v6", 
         title: "Documentaire Hommage ancien PDG - CEA", 
-        description: "Documentaire avec effets visuels 2D et 3D.", 
+        description: "Dans ce documentaire, le CEA a souhaité rendre hommage à leur ancien PDG. J'ai participé au tournage, au montage ainsi qu'aux effets visuels 3D et 2D. C'était un projet très challengeant.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/cea-doc.mp4", 
         poster: "/thumbnails/cea-doc.jpg", 
         duration: "8:19" 
@@ -63,15 +63,15 @@ const categories = {
       { 
         id: "v7", 
         title: "Short Recette - Tiramisu", 
-        description: "Vidéo dynamique explorant de nouveaux formats courts.", 
-        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/tiramisu.mp4", // 👈 Mis à jour sur Cloudflare R2
+        description: "Cette vidéo a été réalisée pour monter en compétences et explorer de nouveaux formats. J'ai voulu filmer cette recette de manière dynamique, avec quelques plans innovants.", 
+        src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/tiramisu.mp4", 
         poster: "/thumbnails/tiramisu.jpg", 
         duration: "0:34" 
       },
       { 
         id: "v8", 
         title: "Short - Conseils Financiers", 
-        description: "Codes des réseaux sociaux : zooms, sous-titres et rétention.", 
+        description: "Pour ce short de promotion, j'ai réalisé le montage vidéo en appliquant les codes des réseaux sociaux : zooms, cuts, sous-titres, textes animés et sound design moderne. J'ai travaillé le 'hook' et le 'call to action' pour maximiser la rétention.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/finance.mp4", 
         poster: "/thumbnails/finance.jpg", 
         duration: "0:30" 
@@ -79,15 +79,15 @@ const categories = {
       { 
         id: "v9", 
         title: "Short Promotionnel - Éditeur de livres", 
-        description: "Style Lifestyle et émotion avec musique classique.", 
+        description: "Ce short a été réalisé pour renforcer mes compétences dans le style 'Lifestyle' afin de transformer le quotidien en contenu intéressant. J'ai souhaité transmettre une émotion naturelle et une esthétique épurée grâce à une musique classique et des plans rapprochés.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/livre.mp4", 
         poster: "/thumbnails/livre.jpg", 
         duration: "0:30" 
       },
       { 
         id: "v10", 
-        title: "Youtubeur Amixem - Divertissement", 
-        description: "Test YouTube : sound design, effets et rythme.", 
+        title: "Youtubeur Amixem - Divertissement / Dégustation", 
+        description: "Dans le cadre d'un test de recrutement, j'ai tenté pour la première fois un montage type YouTube/Divertissement. J'ai repris les codes de la chaîne d'Amixem tout en y ajoutant ma patte artistique avec des effets sonores et visuels. Un beau challenge qui m'a sorti de ma zone de confort.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/amixem.mp4", 
         poster: "/thumbnails/amixem.jpg", 
         duration: "2:33" 
@@ -95,7 +95,7 @@ const categories = {
       { 
         id: "v11", 
         title: "Short Promotionnel - Prêt-à-porter", 
-        description: "Montage de mode avec animations de texte soignées.", 
+        description: "Cette vidéo a été réalisée dans le cadre de mon recrutement chez Almé. C'est la première fois que je montais une vidéo de mode. J'ai souhaité innover en intégrant des animations de texte pour souligner les spécificités des articles.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/mode.mp4", 
         poster: "/thumbnails/mode.jpg", 
         duration: "0:36" 
@@ -103,7 +103,7 @@ const categories = {
       { 
         id: "v12", 
         title: "Publicité Ad - Salle de jeux Arcade", 
-        description: "Transitions dynamiques et sound design gaming.", 
+        description: "Cette publicité pour une salle d'arcade a demandé de l'imagination pour coller aux codes des réseaux sociaux. J'ai utilisé des transitions dynamiques et un sound design adapté en fonction des machines de jeux.", 
         src: "https://pub-f0790ecb785044afb7436b56be8426ce.r2.dev/arcade.mp4", 
         poster: "/thumbnails/arcade.jpg", 
         duration: "0:15" 
@@ -172,7 +172,6 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
     }
   };
 
-  // ✅ Démarrage forcé direct (Empêche le blocage Autoplay du navigateur)
   const handleStart = async () => {
     setIsStarted(true);
     setIsPlaying(true);
@@ -243,7 +242,6 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
       onMouseLeave={() => isPlaying && setShowControls(false)}
       className="group relative aspect-video rounded-xl overflow-hidden border border-white/10 hover:border-[#3E26FF]/60 transition-all shadow-xl bg-black w-full select-none"
     >
-      {/* 📹 LA VIDÉO EST TOUJOURS PRÉSENTE (Pour pré-charger les métadonnées) */}
       <video
         ref={videoRef}
         src={video.src}
@@ -275,14 +273,12 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
         className="w-full h-full object-contain cursor-pointer bg-black"
       />
 
-      {/* ⏳ SPINNER DE CHARGEMENT PENDANT LE BUFFER */}
       {isBuffering && isStarted && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
           <div className="w-9 h-9 rounded-full border-2 border-white/20 border-t-[#3E26FF] animate-spin" />
         </div>
       )}
 
-      {/* 1. ÉCRAN DE MINIATURE (Superposé tant que la vidéo n'est pas lancée) */}
       {!isStarted && (
         <div onClick={handleStart} className="absolute inset-0 cursor-pointer bg-black flex items-center justify-center z-20">
           {video.poster ? (
@@ -299,12 +295,10 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
 
-          {/* Badge Durée */}
           <div className="absolute top-[4%] left-[4%] bg-black/60 backdrop-blur-md px-2 py-0.5 rounded border border-white/10 z-20 pointer-events-none">
             <span className="text-white text-[11px] md:text-xs font-medium tracking-wide">{video.duration}</span>
           </div>
 
-          {/* Bouton Play */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-11 h-11 md:w-12 md:h-12 bg-[#3E26FF] backdrop-blur-md rounded-full border border-white/30 flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(62,38,255,0.7)] transition-all duration-300 shadow-md">
               <svg className="w-4 h-4 text-white translate-x-0.5 fill-current" viewBox="0 0 24 24">
@@ -313,14 +307,12 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
             </div>
           </div>
 
-          {/* Titre */}
           <div className="absolute bottom-[4%] left-[4%] right-[25%] pointer-events-none z-20">
             <h3 className="text-white font-medium text-xs md:text-sm drop-shadow line-clamp-1">{video.title}</h3>
           </div>
         </div>
       )}
 
-      {/* Bouton Détails */}
       <button 
         onClick={(e) => { e.stopPropagation(); setIsInfoOpen(!isInfoOpen); }}
         className="absolute top-[4%] right-[4%] z-30 px-2.5 py-0.5 rounded-full bg-black/50 backdrop-blur-md text-white/90 text-[11px] md:text-xs font-normal border border-white/15 hover:bg-[#3E26FF] hover:border-transparent transition-all"
@@ -328,7 +320,6 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
         {isInfoOpen ? "Retour" : "Détails"}
       </button>
 
-      {/* Modal Description */}
       <AnimatePresence>
         {isInfoOpen && (
           <motion.div 
@@ -338,7 +329,7 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
             className="absolute inset-0 bg-black/95 p-6 flex flex-col justify-center items-center text-center z-40"
           >
             <h4 className="text-white font-semibold text-sm md:text-base mb-2 text-[#3E26FF]">{video.title}</h4>
-            <p className="text-gray-300 text-xs leading-relaxed max-w-sm">{video.description}</p>
+            <p className="text-gray-300 text-xs md:text-sm leading-relaxed max-w-md">{video.description}</p>
             <button 
               onClick={() => setIsInfoOpen(false)} 
               className="mt-4 px-3.5 py-1 rounded-full bg-[#3E26FF] text-white font-medium text-xs tracking-wider uppercase hover:opacity-90 transition"
@@ -349,7 +340,6 @@ function CustomVideoPlayer({ video, isInfoOpen, setIsInfoOpen }: any) {
         )}
       </AnimatePresence>
 
-      {/* Contrôles Vidéo */}
       {isStarted && (
         <div 
           className={`absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2.5 pt-6 flex flex-col gap-1.5 transition-opacity duration-300 z-20 ${
